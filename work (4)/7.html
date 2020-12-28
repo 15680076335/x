@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>Android</li>
+    </ul> -->
+    <script>
+        /* 创建元素 */
+        // 1、最流氓最简单粗暴
+        let strHTML = `
+        <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>Android</li>
+    </ul>
+    `
+    document.body.innerHTML = strHTML
+    const oList = document.querySelector('ul')
+    console.log(oList.innerHTML)
+
+    // 2、古老的方式(普通方式)
+    let oElement = document.createElement('ul')
+    let oItem = document.createElement('li')
+    let oText = document.createTextNode('Java')
+    oItem.appendChild(oText)
+    oElement.appendChild(oItem)
+    document.body.appendChild(oElement)
+    
+    // 3、古老的方式(函数方式)
+    const oFrag = document.createDocumentFragment()  // 防止过多的
+    const oElement = document.createElement('ul')
+    const createElement = (element,text) => {
+        
+    }
+    </script>
+</body>
+</html>

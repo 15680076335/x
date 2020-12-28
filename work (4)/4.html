@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p1{
+            border: 1px skyblue solid;
+        }
+        .p2{
+            background-color: gray;
+        }
+        .p3{
+            display: none;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="myDiv"  class="test" style="border: 1px skyblue solid;"></div>
+    <img src="" alt="">
+    <label for="adsfa">姓名：</label><input type="text" name="userName" id="">
+    <script>
+        /* 访问内置属性 */
+        const oDiv = document.querySelector("div")
+        console.log(oDiv.id)
+        console.log(oDiv.className)
+        /* 访问 lable 里面的 for 属性 */
+        const oLable = document.querySelector("label")
+        console.log(oLable.htmlFor)   /* for 是 js 的关键字，所以这里访问时要用 htmlFor */
+        // 访问 div 的所有属性样式
+        console.log(oDiv.style)
+    </script>
+ -->
+
+    <!-- className -->
+    <h1 class="p1 p2">this is a heading</h1>
+    <button id="myButton">click</button>
+    <script>
+        const heading = document.querySelector('h1')
+        // // 打印未添加时的情况
+        // console.log(heading.className)
+        // /* 添加一个类名(h1的内容会消失) */
+        // heading.className += ' p3'
+        // // 打印添加之后的情况，查看是否添加成功
+        // console.log(heading.className) 
+
+        /* classList */
+        console.log(heading.classList)
+        // 删除一个类名
+        heading.classList.remove('p2')
+
+
+        
+    </script>
+
+
+    <!-- <div id="myDiv1" ddd="uesr" eee="name">test</div>
+    <scrip>
+        const oDiv1 = document.querySelector("#myDiv1") 
+        /* 获取自定义属性和原生属性 */
+        // 自定义
+        let ddd = oDiv1.getAttribute('ddd')
+        console.log(ddd)
+        // 原生
+        let id = oDiv1.getAttribute('id')
+        console.log(id)
+
+        // 向自定义属性传入参数 yangqian ，再获取
+        oDiv1.setAttribute('eee','yangqian')
+        let eee = oDiv1.getAttribute('eee')
+        console.log(eee)
+    </scrip> -->
+
+
+    <!-- HTML5 自定义数据属性 -->
+    <div id="myDiv2" data-username="yangqian" data-title="student">test2</div>
+    <script>
+        /* 获取数据属性 */
+        const myDiv2 = document.querySelector("#myDiv2")
+        console.log(myDiv2.dataset)
+        // 获取自定义数据属性
+        console.log(myDiv2.dataset.userName)
+        // 修改数据属性值
+        myDiv2.dataset.title = 'teacher'
+        console.log(myDiv2.dataset.title)
+    </script>
+</body>
+</html>

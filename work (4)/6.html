@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>javaScript</li>
+        <li>Andorid</li>
+    </ul>
+    <script>
+        const oList = document.querySelector('ul')
+        console.log(oList.parentNode)
+        console.log(oList.parentElement)
+        // 获取 ul 的子结点
+        console.log(oList.childNodes)   // 结果：9 (自动算上了空格)
+        // 仅仅获取子结点(不受空格影响)
+        console.log(oList.children)
+        // 1、访问第一个元素结点
+        console.log(oList.firstChild)
+        console.log(oList.firstElementChild)
+        // 2、访问最后一个元素结点
+        console.log(oList.lastElementChild)
+        // 3、访问相邻的元素结点
+        console.log(oList.firstElementChild.nextElementSibling)
+        console.log(oList.lastElementChild.previousElementSibling)
+        // 4、元素结点数目
+        console.log(oList.childNodes.length)   //不太精确
+        console.log(oList.childElementCount)  // 较精确
+        // 
+    </script>
+</body>
+</html>

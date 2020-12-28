@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Java</li>
+        <li>JavaScript</li>
+    </ul>
+    <input type="text" id="txtItem">
+    <button id="btnAdd">+</button>
+    <button id="btnDel">-</button>
+    <script>
+        const oList = document.querySelector('ul')
+        /* 对输入的文本进行添加操作 */
+        document.querySelector('#btnAdd').addEventListener('click',()=>{
+            let txtItem = document.querySelector("#txtItem").Value
+            let oE = document.createElement("li")
+            oE.textContent = txtItem
+            oList.appendChild(oE)
+            document.querySelector('#txtItem').Value=''
+        })
+        /* 对元素的最后个文本进行删减操作 */
+        document.querySelector('#btnDel').addEventListener('click',()=>{
+            oList.removeChild(oList.lastElementChild)
+            /* 判断是否还有内容，如果没有则 */
+        })
+    </script>
+</body>
+</html>
